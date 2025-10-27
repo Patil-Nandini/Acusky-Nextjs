@@ -5,7 +5,7 @@ import TrustedByAirportsSection from "./TrustedByAirportsSection";
 import AirportAnimation from "./AirportAnimation";
 import AirportFunctions from "./AirportSection";
 import DevelopmentPartner from "./DevelopmentPartnerSection";
- 
+
 const LegacySystem = () => {
   return (
     <div
@@ -16,14 +16,14 @@ const LegacySystem = () => {
         backgroundPosition: "center",
       }}
     >
-      <Towersection/>
-      <AirportFunctions/>
+      <Towersection />
+      <AirportFunctions />
       <WhyAirportsChoose />
-      <TrustedByAirportsSection/>
-      <AirportAnimation/>
-      <DevelopmentPartner/>
+      <TrustedByAirportsSection />
+      <AirportAnimation />
+      <DevelopmentPartner />
     </div>
   );
 };
- 
+
 export default LegacySystem;

@@ -1,8 +1,17 @@
 "use client";
- 
+
 import Image from "next/image";
- 
+
 export default function Towersection() {
+  const floatingIcons = [
+    { src: "/Legacy_Icon_1.svg", className: "top-[22%] left-[86%]" },
+    { src: "/Legacy_Icon_2.svg", className: "top-[50%] left-[66.5%]" },
+    { src: "/Legacy_Icon_3.svg", className: "bottom-[38%] left-[25.7%]" },
+    { src: "/Legacy_Icon_4.svg", className: "top-[21%] right-[86.3%]" },
+    { src: "/Legacy_Icon_5.svg", className: "top-[35.5%] right-[15.5%]" },
+    { src: "/Legacy_Icon_6.svg", className: "bottom-[53%] right-[76%]" },
+  ];
+
   const problems = [
     {
       icon: "/outdated.svg",
@@ -47,10 +56,28 @@ export default function Towersection() {
             </p>
           </div>
         </div>
-        <></>
+        <div className="absolute inset-0 flex items-center justify-center">
+          {floatingIcons.map((icon, index) => (
+            <div
+              key={index}
+              className={`absolute ${icon.className} 
+                w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] 
+                flex items-center justify-center `}
+            >
+              {/* ✅ Using <object> for animated SVGs */}
+              <object
+                type="image/svg+xml"
+                data={icon.src}
+                className="w-[70%] h-[70%] pointer-events-none"
+              />
+            </div>
+          ))}
+        </div>
       </section>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-20 lg:gap-30  xl:gap-10  w-[90%] justify-center items-stretch
-    -mt-55   sm:-mt-56 md:-mt-66 lg:-mt-50 xl:-mt-66 2xl:-mt-50 mb-20">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-20 lg:gap-30  xl:gap-10  w-[90%] justify-center items-stretch
+    -mt-55   sm:-mt-56 md:-mt-66 lg:-mt-50 xl:-mt-66 2xl:-mt-50 mb-20"
+      >
         {problems.map((problem, idx) => (
           <div
             key={idx}
@@ -75,7 +102,7 @@ export default function Towersection() {
                 priority={idx === 0}
               />
             </div>
- 
+
             <div className="mt-8 text-[#504E4E] text-[18px] lg:text-[20px] flex items-center justify-center">
               {problem.text}
             </div>
