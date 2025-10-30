@@ -4,12 +4,35 @@ import Image from "next/image";
 
 export default function Towersection() {
   const floatingIcons = [
-    { src: "/Legacy_Icon_1.svg", className: "top-[22%] left-[86%]" },
-    { src: "/Legacy_Icon_2.svg", className: "top-[50%] left-[66.5%]" },
-    { src: "/Legacy_Icon_3.svg", className: "bottom-[38%] left-[25.7%]" },
-    { src: "/Legacy_Icon_4.svg", className: "top-[21%] right-[86.3%]" },
-    { src: "/Legacy_Icon_5.svg", className: "top-[35.5%] right-[15.5%]" },
-    { src: "/Legacy_Icon_6.svg", className: "bottom-[53%] right-[76%]" },
+    {
+      src: "/Legacy_Icon_1.svg",
+      className:
+        " lg:left-[43%] top-[-19%] xl:left-[42.5%] hidden lg:block relative",
+    },
+    {
+      src: "/Legacy_Icon_2.svg",
+      className: " lg:left-[67%]  top-[50%] xl:left-[68%] xl:top-[51%] hidden lg:block",
+    },
+    {
+      src: "/Legacy_Icon_3.svg",
+      className:
+        " lg:left-[25%] lg:bottom-[35%] bottom-[38%] xl:left-[26%]  xl:bottom-[37%] hidden lg:block",
+    },
+    {
+      src: "/Legacy_Icon_4.svg",
+      className:
+        " lg:right-[84%] lg:top-[24%] top-[21%] xl:right-[86%] xl:top-[25%]  hidden lg:block",
+    },
+    {
+      src: "/Legacy_Icon_5.svg",
+      className:
+        " lg:right-[12%] lg:top-[38%] top-[35.5%] xl:right-[14%] hidden lg:block",
+    },
+    {
+      src: "/Legacy_Icon_6.svg",
+      className:
+        " lg:right-[74%] lg:bottom-[49%] bottom-[53%] xl:right-[76%] xl:bottom-[52%] hidden lg:block",
+    },
   ];
 
   const problems = [
@@ -35,11 +58,13 @@ export default function Towersection() {
     },
   ];
   return (
-    <div className="relative w-[100%]  h-full flex flex-col items-center justify-center mx-auto">
+    <div className="relative w-[100%]  h-full flex flex-col items-center justify-center mx-auto md:gap-[120px]">
       <section
         className="
-    relative w-full h-[190vh] sm:h-[150vh] md:h-[150vh] lg:h-[130vh] xl:h-[150vh] flex items-start justify-start pt-2 lg:pt-10
-    bg-no-repeat bg-cover  lg:bg-cover  bg-center
+    relative w-full h-[190vh] sm:h-[150vh] md:h-[150vh] lg:h-[130vh] xl:h-[159vh] flex items-start justify-start pt-2 lg:pt-10
+    bg-no-repeat bg-cover  lg:bg-cover  bg-center lg:max-w-[1024px] lg:max-h-[778px]   xl:max-w-[1241px] xl:max-h-[1022px]
+    [@media(min-width:1440px)]:max-w-[1440px]
+    [@media(min-width:1440px)]:max-h-[1098px]
     bg-[url('/LegacyBgImage.png')]
   "
       >
@@ -61,7 +86,7 @@ export default function Towersection() {
             <div
               key={index}
               className={`absolute ${icon.className} 
-                w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] 
+                w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[110px] lg:h-[110px] 
                 flex items-center justify-center `}
             >
               {/* ✅ Using <object> for animated SVGs */}

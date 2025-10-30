@@ -31,7 +31,7 @@ export default function HeroAcuSky() {
                 hover:bg-white/8 hover:shadow-[0_8px_60px_rgba(255,255,255,0.15),inset_0_0_25px_rgba(255,255,255,0.1)]
               "
             >
-              <h1 className="text-white font-bold leading-tight text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px]">
+              <h1 className="text-white font-bold leading-tight text-[28px] sm:text-[32px] md:text-[36px] xl:text-[40px]">
                 Built for Growing Airports.
                 <br />
                 Future-Proof. All-In-One
@@ -57,7 +57,7 @@ export default function HeroAcuSky() {
                       data="/homepage_button_1.svg"
                       className="absolute inset-0 w-full h-full cursor-pointer"
                     />
-                    <span className="relative z-10">See AcuSky in action</span>
+                    <span className="relative z-10 mt10">See AcuSky in action</span>
                   </button>
 
                   <button
@@ -72,17 +72,19 @@ export default function HeroAcuSky() {
                     <span className="relative z-10">Schedule a demo</span>
                   </button>
                 </div>
+                
               </div>
             </div>
           </div>
-          <div className="md:pl-0 flex md:justify-end justify-center">
+          <div className="relative flex md:justify-end justify-center md:pl-0">
+            {/* Background video */}
             <div
               className="
-                relative
-                w-[min(680px,92vw)]
-                md:w-[clamp(820px,88vw,920px)]
-                lg:ml-[-140px] md:ml-[-120px]
-              "
+      relative
+      w-[min(680px,92vw)]
+      md:w-[clamp(820px,88vw,920px)]
+      lg:ml-[-140px] md:ml-[-120px]
+    "
             >
               <video
                 src="/Homepage_Animation.webm"
@@ -93,9 +95,22 @@ export default function HeroAcuSky() {
                 preload="metadata"
                 className="w-full h-auto object-contain select-none pointer-events-none"
                 draggable={false}
-              >
-                Your browser does not support the video tag.
-              </video>
+              />
+            </div>
+
+            {/* Text Overlays */}
+            <div className="absolute inset-0 pointer-events-none">
+              <p className="absolute right-[19%] top-[7%] md:top-[6%] md:right-[27%] text-white text-[7px] lg:text-[14px] font-semibold">
+                Tenant Management
+              </p>
+
+              <p className="absolute right-[50%] top-[35%] md:top-[36%] md:right-[64%] text-white  text-[7px] lg:text-[14px] font-semibold">
+                ABRM
+              </p>
+
+              <p className="absolute bottom-[28%] right-[27%] md:bottom-[29%] md:right-[38%] text-white  text-[7px] lg:text-[14px] font-semibold">
+                Gate Management
+              </p>
             </div>
           </div>
         </div>

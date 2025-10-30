@@ -156,8 +156,8 @@ export default function TrustSection() {
                 />
                 <div className="relative px-4 sm:px-6 md:px-8 py-3 sm:py-4">
                   <p className="text-slate-800 text-sm sm:text-base md:text-lg leading-relaxed text-center">
-                    Airports choose AcuSky because it offers one software that
-                    simplifies operations, reduces costs, and grows as they do.
+                    The results are proven: faster invoicing, higher revenue
+                    capture, and greater efficiency for airports of all sizes.
                   </p>
                 </div>
               </div>
@@ -181,7 +181,13 @@ export default function TrustSection() {
                   tenant satisfaction immediately. The self-service portal was a
                   game changer.”
                 </p>
-                <p className="font-semibold text-[#000000E5] text-[13px] sm:text-[14px] text-end lg:text-center">
+                <p
+                  className="
+    font-semibold text-[#000000E5] text-[13px] sm:text-[14px]
+    text-end
+    [@media(min-width:325px)_and_(max-width:620px)]:text-center xl:pr-10
+  "
+                >
                   – Airport CFO
                 </p>
               </div>
@@ -199,10 +205,16 @@ export default function TrustSection() {
             <div className="absolute inset-0 flex items-start justify-center py-2 sm:py-10 md:py-4  lg:py-6 xl:py-5">
               <div className="w-[45%] md:w-[48%] lg:w-[40%] xl:w-[65%]">
                 <p className="text-[#504E4E] text-[12px] sm:text-[14px]">
-                  “Our old system couldn&apos;t keep up with growth. AcuSky gave us
-                  one modern software that scales with us.”
+                  “Our old system couldn&apos;t keep up with growth. AcuSky gave
+                  us one modern software that scales with us.”
                 </p>
-                <p className="font-semibold text-[#000000E5] text-[12px] sm:text-[14px] text-end lg:text-center">
+                <p
+                  className="
+    font-semibold text-[#000000E5] text-[13px] md:text-[14px]
+    text-end
+    [@media(min-width:325px)_and_(max-width:620px)]:text-center xl:pr-5
+  "
+                >
                   – Airport Director of Operations
                 </p>
               </div>

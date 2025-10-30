@@ -7,15 +7,15 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   const icons = [
     {
-      href: "https://www.linkedin.com/company/acu-fi/",
+      href: "https://www.linkedin.com/company/acusky/",
       icon: <FaLinkedin className="text-[#0A66C2]" size={22} />,
     },
     {
-      href: "https://x.com/acu_fi",
+      href: "https://x.com/acu_sky",
       icon: <FaXTwitter className="text-black" size={22} />,
     },
     {
-      href: "https://www.youtube.com/@AcuFi_Official",
+      href: "https://www.youtube.com/@AcuskyOfficial",
       icon: <FaYoutube className="text-[#FF0000]" size={22} />,
     },
   ];

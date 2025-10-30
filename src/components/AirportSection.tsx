@@ -51,7 +51,7 @@ const Card: FC<CardItem> = ({ title, desc, icon }) => {
       className="
         relative flex items-stretch gap-4 overflow-visible
         rounded-2xl border border-slate-200/70
-        bg-transparent backdrop-blur-sm
+        bg-transparent backdrop-blur-sm 
         shadow-sm hover:shadow-md transition-shadow
         p-4 sm:p-5
 
@@ -64,6 +64,7 @@ const Card: FC<CardItem> = ({ title, desc, icon }) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 100%",
         backgroundPosition: "center",
+        // background:"#D7EAFF99",
       }}
     >
       <svg
@@ -71,7 +72,7 @@ const Card: FC<CardItem> = ({ title, desc, icon }) => {
         className="
           pointer-events-none absolute z-10 block
           left-35 top-2.5
-          -translate-x-1/2 -translate-y-1/2 rotate-180
+          -translate-x-1/2 -translate-y-1/2 rotate-180 
         "
         style={{ width: "var(--notchW)", height: "var(--notchH)" }}
         viewBox="0 0 100 50"
@@ -90,7 +91,7 @@ const Card: FC<CardItem> = ({ title, desc, icon }) => {
         className="
           pointer-events-none absolute z-10 block
           left-35 bottom-2.5
-          -translate-x-1/2 translate-y-1/2
+          -translate-x-1/2 translate-y-1/2 
         "
         style={{ width: "var(--notchW)", height: "var(--notchH)" }}
         viewBox="0 0 100 50"
@@ -110,7 +111,7 @@ const Card: FC<CardItem> = ({ title, desc, icon }) => {
             relative h-44 w-28 grid place-items-center
             before:content-[''] before:absolute before:-inset-2
             before:bg-[url('/IconDiv_bg.png')] before:bg-no-repeat
-            before:bg-center before:bg-contain
+            before:bg-center before:bg-contain 
           "
           aria-hidden={false}
         >
