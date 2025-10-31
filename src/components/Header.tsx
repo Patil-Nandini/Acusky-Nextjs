@@ -15,7 +15,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const navItems = [
-    { label: "Home", href: "#" },
+ { label: "Home", href: "/" },
     { label: "Products", href: "#" },
     { label: "Solutions", href: "/under-renovation" },
     { label: "About", href: "/under-renovation" },
@@ -72,13 +72,13 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav className="hidden lg:flex items-center">
+        <nav className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
             <div key={item.label} className="relative group">
               <Link
                 href={item.href}
                 onClick={() => setActive(item.label)}
-                className={`flex items-center px-4 py-1 rounded-[34px] font-medium text-sm transition 
+                className={`flex items-center px-4 py-2 rounded-[34px] font-medium text-sm transition 
                   ${
                     active === item.label
                       ? "bg-white text-gray-900"
@@ -177,7 +177,7 @@ export default function Header() {
 
       {isMenuOpen && (
         <div className="lg:hidden bg-white/10 backdrop-blur-[8px] border-t border-white/20 flex flex-col items-center py-6 space-y-4 animate-slideDown">
-          <form className="flex items-center bg-white/40 rounded-full pl-3 w-[85%] border border-white/30 shadow mt-2">
+          <form className="flex items-center bg-white/40 rounded-full pl-3 w-[80%] border border-white/30 shadow mt-2">
             <input
               type="text"
               placeholder="Search here..."
