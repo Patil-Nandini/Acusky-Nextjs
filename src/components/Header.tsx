@@ -11,7 +11,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 export default function Header() {
   const [active, setActive] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProductsOpen, setIsProductsOpen] = useState(false); 
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const pathname = usePathname();
 
   const navItems = [
@@ -25,26 +25,26 @@ export default function Header() {
   const products = [
     {
       name: "Tenant Management",
-      desc: "Streamline tenant onboarding and operations.",
-      icon: "/ProductIcon.png",
+      desc: "The complete tenant onboarding and operations suite.",
+      icon: "/TenantIcon.svg",
       href: "/under-renovation",
     },
     {
       name: "Airport Business & Revenue Management",
-      desc: "Manage airport operations and revenues effectively.",
-      icon: "/ProductIcon.png",
+      desc: "Manage operations, leases, billing, utilities, and more.",
+      icon: "/BusinessManagemenet.svg",
       href: "/under-renovation",
     },
     {
       name: "Space Management",
-      desc: "Optimize asset utilization and space allocation.",
-     icon: "/ProductIcon.png",
+      desc: "Maximize space utilization with optimal allocation.",
+      icon: "/Space-Management.svg",
       href: "/under-renovation",
     },
     {
       name: "Customer Portal",
-      desc: "Empower customers with self-service tools.",
-     icon: "/ProductIcon.png",
+      desc: "A smart self-service experience for your customers.",
+      icon: "/Customer-Manage.svg",
       href: "/under-renovation",
     },
   ];
@@ -105,35 +105,38 @@ export default function Header() {
               </Link>
 
               {item.label === "Products" && (
-                <div className="absolute left-0 mt-2 w-[320px] bg-white text-gray-800 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 z-20">
-                  <ul className="flex flex-col gap-3 py-3 px-4">
-                    {products.map((product) => (
-                      <li
-                        key={product.name}
-                        className="flex items-center gap-3 hover:bg-gray-50 rounded-lg p-2 transition"
-                      >
-                        <div className="flex-shrink-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow">
-                          <Image
-                            src={product.icon}
-                            alt={product.name}
-                            width={28}
-                            height={28}
-                          />
-                        </div>
-                        <div className="flex flex-col">
-                          <Link
-                            href={product.href}
-                            className="font-semibold text-[14px] text-[#0F1720] hover:underline cursor-pointer"
+                <div className="absolute left-0 mt-2 w-[320px] text-gray-800 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 z-20">
+                  <div className="relative rounded-xl p-[20px] bg-gradient-to-r from-white/40 to-white/10 backdrop-blur-md">
+                    <div className="rounded-xl bg-white/70 backdrop-blur-lg">
+                      <ul className="flex flex-col gap-3 py-3 px-4">
+                        {products.map((product) => (
+                          <li
+                            key={product.name}
+                            className="flex items-center gap-3 hover:bg-white/60 rounded-lg p-2 transition"
                           >
-                            {product.name}
-                          </Link>
-                          <span className="text-[#677489] text-[12px] leading-snug">
-                            {product.desc}
-                          </span>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+                            <Image
+                              src={product.icon}
+                              alt={product.name}
+                              width={28}
+                              height={28}
+                              className="w-10 h-10"
+                            />
+                            <div className="flex flex-col">
+                              <Link
+                                href={product.href}
+                                className="font-semibold text-[14px] text-[#567DAB] hover:underline cursor-pointer"
+                              >
+                                {product.name}
+                              </Link>
+                              <span className="text-[#677489] text-[12px] leading-snug">
+                                {product.desc}
+                              </span>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
