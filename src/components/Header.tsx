@@ -15,7 +15,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const navItems = [
- { label: "Home", href: "/" },
+    { label: "Home", href: "/" },
     { label: "Products", href: "#" },
     { label: "Solutions", href: "/under-renovation" },
     { label: "About", href: "/under-renovation" },
@@ -53,12 +53,11 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full fixed top-0 left-0 z-30 border-b border-white/30 shadow-[0_2px_12px_0_rgba(31,38,135,0.11)]
-        ${
-          isUnderRenovation ? "bg-[#ACD4F4]" : "bg-white/10 backdrop-blur-[8px]"
-        }`}
+      className={`w-full fixed top-0 left-0 z-[9999] border-b border-white/30 shadow-[0_2px_12px_0_rgba(31,38,135,0.11)]
+    ${isUnderRenovation ? "bg-[#ACD4F4]" : "bg-white/10 backdrop-blur-[8px]"}
+  `}
     >
-      <div className="w-[95%] mx-auto px-4 md:px-10 flex items-center justify-between h-20">
+      <div className="w-[95%] mx-auto px-4 md:px-10 flex items-center justify-between h-20 relative  z-[9999]">
         <div className="flex items-center">
           <Link href="/" className="cursor-pointer">
             <Image
@@ -105,7 +104,7 @@ export default function Header() {
               </Link>
 
               {item.label === "Products" && (
-                <div className="absolute left-0 mt-2 w-[320px] text-gray-800 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 z-20">
+                <div className="absolute left-0 mt-2 w-[320px] text-gray-800 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 z-[10000]">
                   <div className="relative rounded-xl p-[20px] bg-gradient-to-r from-white/40 to-white/10 backdrop-blur-md">
                     <div className="rounded-xl bg-white/70 backdrop-blur-lg">
                       <ul className="flex flex-col gap-3 py-3 px-4">
