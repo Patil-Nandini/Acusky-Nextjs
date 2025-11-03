@@ -40,7 +40,7 @@ const rightCards: CardItem[] = [
   },
   {
     title: "Custom Development",
-    desc: "Tailored features and integrations to fit your airport’s unique needs.",
+    desc: "Our team builds tailored features for your airport’s unique needs.",
     icon: "/Icon6.svg",
   },
 ];
