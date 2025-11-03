@@ -14,7 +14,7 @@ export default function WhyAirportsChoose() {
     },
     {
       title: "All-In-One Software",
-      desc: "Operations, billing, gates, tenants, and utilities, all brought together in one software. No more vendor juggling.",
+      desc: "Operations, billing, gates, utilities, and tenant services in one software. No silos. No vendor juggling.",
       bg: "/All-In-One-Software.png",
       width: "max-w-[300px] min-w-[250px]",
       height: "495px",
@@ -33,7 +33,7 @@ export default function WhyAirportsChoose() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % cards.length);
-    }, 1200); 
+    }, 1200);
     return () => clearInterval(interval);
   }, [cards.length]);
 
