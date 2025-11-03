@@ -195,14 +195,14 @@ const AirportFunctions: FC = () => {
           "
         >
           <div className="relative aspect-[3/4] w-full overflow-visible ">
-            <Image
-              src="/AShaped.png"
-              alt="Airport concourse"
-              fill
-              className=" object-cover"
-              priority
-              sizes="(min-width:2056px) 720px,(min-width:1024px) 420px, (min-width:640px) 480px, 100vw"
-            />
+            <video
+              src="/AcuSky_PlaneMask.webm"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 object-cover w-full h-full"
+            ></video>
           </div>
         </div>
 

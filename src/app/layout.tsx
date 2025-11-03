@@ -1,6 +1,5 @@
-
 import { Sarabun } from "next/font/google";
-import "./globals.css"; 
+import "./globals.css";
 
 const sarabun = Sarabun({
   subsets: ["latin"],
@@ -14,8 +13,9 @@ export const metadata = {
 
 export default function RootLayout({ children }: { readonly children: React.ReactNode }) {
   return (
-   <html lang="en" className={sarabun.className}>
-      <body>{children}</body>
+    <html lang="en" className={sarabun.className}>
+      {/* suppressHydrationWarning avoids failing hydration if extensions (or other client-only code) mutate attributes */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

@@ -52,7 +52,7 @@ export default function TrustSection() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
           Trusted by Airports That Refuse to Settle for Legacy Software
         </h2>
-        <p className="text-gray-700 text-sm sm:text-base md:text-lg">
+        <p className=" text-sm sm:text-base md:text-lg text-[#0F1720]">
           Airports partner with AcuSky to modernize operations, increase
           revenue, and simplify management
           <br className="hidden sm:block" />
@@ -176,16 +176,16 @@ export default function TrustSection() {
             />
             <div className="absolute inset-0 flex items-start justify-center py-1 px-1 sm:py-2 lg:px-4 md:py-4 md:px-2 lg:py-6 xl:py-5">
               <div className="w-[45%]  lg:w-[40%] xl:w-[90%]">
-                <p className="text-[#504E4E] text-[12px] sm:text-[14px]">
+                <p className="text-[#504E4E] text-[12px] sm:text-[14px] pr-[10px]">
                   “With AcuSky, we cut invoicing time in half and improved
                   tenant satisfaction immediately. The self-service portal was a
                   game changer.”
                 </p>
                 <p
                   className="
-    font-semibold text-[#000000E5] text-[13px] sm:text-[14px]
+    font-semibold text-[#000000E5] text-[13px] sm:text-[14px] 
     text-end
-    [@media(min-width:325px)_and_(max-width:620px)]:text-center xl:pr-10
+    [@media(min-width:325px)_and_(max-width:620px)]:text-center xl:pr-10 
   "
                 >
                   – Airport CFO
@@ -204,7 +204,7 @@ export default function TrustSection() {
             />
             <div className="absolute inset-0 flex items-start justify-center py-2 sm:py-10 md:py-4  lg:py-6 xl:py-5">
               <div className="w-[45%] md:w-[48%] lg:w-[40%] xl:w-[65%]">
-                <p className="text-[#504E4E] text-[12px] sm:text-[14px]">
+                <p className="text-[#504E4E] text-[12px] sm:text-[14px] pr-[15px] lg:pr-[5px]">
                   “Our old system couldn&apos;t keep up with growth. AcuSky gave
                   us one modern software that scales with us.”
                 </p>

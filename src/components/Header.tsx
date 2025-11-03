@@ -57,7 +57,7 @@ export default function Header() {
     ${isUnderRenovation ? "bg-[#ACD4F4]" : "bg-white/10 backdrop-blur-[8px]"}
   `}
     >
-      <div className="w-[95%] mx-auto px-4 md:px-10 flex items-center justify-between h-20 relative  z-[9999]">
+      <div className="w-[95%] mx-auto px-4 md:px-10 flex items-center justify-between h-20">
         <div className="flex items-center">
           <Link href="/" className="cursor-pointer">
             <Image
@@ -73,38 +73,44 @@ export default function Header() {
 
         <nav className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
-            <div key={item.label} className="relative group">
-              <Link
-                href={item.href}
-                onClick={() => setActive(item.label)}
-                className={`flex items-center px-4 py-2 rounded-[34px] font-medium text-sm transition 
-                  ${
-                    active === item.label
-                      ? "bg-white text-gray-900"
-                      : "bg-white/10 text-white"
-                  }`}
-                style={{ boxShadow: "0px 2px 4px 0px #00000026" }}
+            <div key={item.label} className="relative">
+              <div
+                className="peer flex items-center"
+                onMouseEnter={() => setActive(item.label)}
+                onMouseLeave={() => setActive("")}
               >
-                {item.label}
-                {item.label === "Products" && (
-                  <svg
-                    className="w-4 h-4 mt-1.5 ml-2 transition-transform duration-200 group-hover:rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                )}
-              </Link>
+                <Link
+                  href={item.href}
+                  onClick={() => setActive(item.label)}
+                  className={`flex items-center px-4 py-2 rounded-[34px] font-medium text-sm transition 
+        ${
+          active === item.label
+            ? "bg-white text-gray-900"
+            : "bg-white/10 text-white"
+        }`}
+                  style={{ boxShadow: "0px 2px 4px 0px #00000026" }}
+                >
+                  {item.label}
+                  {item.label === "Products" && (
+                    <svg
+                      className="w-4 h-4 mt-1.5 ml-2 transition-transform duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  )}
+                </Link>
+              </div>
 
               {item.label === "Products" && (
-                <div className="absolute left-0 mt-2 w-[320px] text-gray-800 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 z-[10000]">
+                <div className="absolute left-0 mt-2 w-[320px] text-gray-800 rounded-xl shadow-lg opacity-0 invisible peer-hover:opacity-100 peer-hover:visible hover:opacity-100 hover:visible transition-all duration-300 z-20">
                   <div className="relative rounded-xl p-[20px] bg-gradient-to-r from-white/40 to-white/10 backdrop-blur-md">
                     <div className="rounded-xl bg-white/70 backdrop-blur-lg">
                       <ul className="flex flex-col gap-3 py-3 px-4">
@@ -196,12 +202,12 @@ export default function Header() {
                 <div key={item.label} className="w-[80%]">
                   <button
                     onClick={() => setIsProductsOpen(!isProductsOpen)}
-                    className={`w-full flex items-center justify-center  px-4 py-2 rounded-[34px] font-medium text-sm transition 
-                      ${
-                        active === item.label
-                          ? "bg-white text-gray-900"
-                          : "bg-white/10 text-white"
-                      }`}
+                    className={`w-full flex items-center justify-center px-4 py-2 rounded-[34px] font-medium text-sm transition 
+            ${
+              active === item.label
+                ? "bg-white text-gray-900"
+                : "bg-white/10 text-white"
+            }`}
                     style={{ boxShadow: "0px 2px 4px 0px #00000026" }}
                   >
                     {item.label}
@@ -230,12 +236,12 @@ export default function Header() {
                           <div className="flex flex-col text-left">
                             <Link
                               href={product.href}
-                              className="font-semibold text-[14px] text-white hover:underline"
+                              className="font-semibold text-[14px] text-[#3271BD] hover:underline"
                               onClick={() => setIsMenuOpen(false)}
                             >
                               {product.name}
                             </Link>
-                            <span className="text-[12px] text-gray-200 leading-snug">
+                            <span className="text-[12px] text-black lg:text-gray-200 leading-snug">
                               {product.desc}
                             </span>
                           </div>
@@ -256,11 +262,11 @@ export default function Header() {
                   setIsMenuOpen(false);
                 }}
                 className={`w-[80%] text-center px-4 py-2 rounded-[34px] font-medium text-sm transition 
-                  ${
-                    active === item.label
-                      ? "bg-white text-gray-900"
-                      : "bg-white/10 text-white"
-                  }`}
+        ${
+          active === item.label
+            ? "bg-white text-gray-900"
+            : "bg-white/10 text-white"
+        }`}
                 style={{ boxShadow: "0px 2px 4px 0px #00000026" }}
               >
                 {item.label}

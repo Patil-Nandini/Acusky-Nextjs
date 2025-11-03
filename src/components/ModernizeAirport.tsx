@@ -40,11 +40,7 @@ export default function HeroModernizeAirport() {
           that scales as you grow.
         </p>
 
-        {/* Buttons with running border animation */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          {/* <button className="btn-anim px-7 py-3 rounded-full font-semibold text-white bg-transparent">
-  <span>See AcuSky in Action</span>
-</button> */}
           <button
             className="relative w-full h-[70px] sm:h-[80px] md:h-[90px] font-semibold text-white overflow-hidden rounded-lg cursor-pointer"
             onClick={() => router.push("/under-renovation")}
@@ -54,14 +50,11 @@ export default function HeroModernizeAirport() {
               data="/homepage_button_1.svg"
               className="absolute inset-0 w-full h-full cursor-pointer"
             />
-            <span className="relative z-10 text-xs md:text-base ">
+            <span className="relative z-10 text-xs md:text-base cursor-pointer">
               See AcuSky in action
             </span>
           </button>
 
-          {/* <button className="btn-anim btn-anim--light px-7 py-3 rounded-full font-semibold text-[#1A1F3C] bg-transparent">
-  <span>Learn How Airports Grow Smarter</span>
-</button> */}
           <button
             className="relative w-full h-[90px] sm:h-[80px] md:h-[90px] font-semibold text-[#29324C] overflow-hidden mt-[-16px] sm:mt-0 md:ml-[-47px]  cursor-pointer"
             onClick={() => router.push("/under-renovation")}
@@ -71,8 +64,7 @@ export default function HeroModernizeAirport() {
               data="/homepage_button_2.svg"
               className="absolute inset-0 w-full h-full cursor-pointer"
             />
-            {/* <span className="relative z-10    ">Learn How Airports<br/> Grow Smarter</span> */}
-            <span className="relative z-10 inline-flex flex-col items-center">
+            <span className="relative z-10 inline-flex flex-col items-center cursor-pointer">
               <span className="text-xs md:text-base   ">
                 Learn How Airports
               </span>
