@@ -27,7 +27,7 @@ export default function Header() {
       name: "Tenant Management",
       desc: "The complete tenant onboarding and operations suite.",
       icon: "/TenantIcon.svg",
-      href: "/under-renovation",
+      href: "/Products/tenant-management",
     },
     {
       name: "Airport Business & Revenue Management",
