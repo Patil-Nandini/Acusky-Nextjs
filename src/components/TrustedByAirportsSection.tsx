@@ -90,7 +90,7 @@ export default function TrustSection() {
                     alt="AcuSky"
                     width={120}
                     height={120}
-                    className="w-[72px] h-[72px] sm:w-[96px] sm:h-[96px] md:w-[110px] md:h-[110px] relative left-[90px] md:left-[200px]"
+                    className="w-[72px] h-[72px] sm:w-[96px] sm:h-[96px] md:w-[110px] md:h-[110px] relative left-[90px] md:left-[200px] lg:left-[280px] md:bottom-[10px]"
                   />
                 </div>
 
@@ -131,8 +131,6 @@ export default function TrustSection() {
                   ))}
                 </div>
               </div>
-
-              {/* Plane Banner */}
               <div
                 className="
                   relative mx-auto mt-8 sm:mt-24 md:mt-28
