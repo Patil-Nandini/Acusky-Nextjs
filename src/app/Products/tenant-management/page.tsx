@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ReadyToSimplyFy from "@/components/TenantManagement/ReadyToSimplyFy";
 import TheSolution from "@/components/TenantManagement/TheSolution";
 
 export default function TenantManagement() {
@@ -8,6 +9,7 @@ export default function TenantManagement() {
       <div className="w-full ">
         {/* <Header /> */}
         <TheSolution/>
+        <ReadyToSimplyFy/>
         <Footer />
       </div>
     </main>

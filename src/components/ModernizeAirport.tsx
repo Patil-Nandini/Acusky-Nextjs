@@ -14,13 +14,9 @@ export default function HeroModernizeAirport() {
           pt-[500px] pb-15 sm:pt-72 md:pt-80 lg:pt-96 xl:pt-[460px]
         "
       style={{
-        backgroundSize: "100% 100%", // ✅ full image visible on wide screens
+        backgroundSize: "100% 100%", 
       }}
     >
-      {/* Overlay gradient */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-[#001C3B]/30 to-[#000D1F]/80" /> */}
-
-      {/* Glassy content card */}
       <div
         className="
           relative z-10 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-3xl text-center

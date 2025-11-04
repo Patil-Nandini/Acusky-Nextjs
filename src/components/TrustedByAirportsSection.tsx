@@ -173,7 +173,7 @@ export default function TrustSection() {
               className="object-contain rounded-[20px]"
             />
             <div className="absolute inset-0 flex items-start justify-center py-1 px-1 sm:py-2 lg:px-4 md:py-4 md:px-2 lg:py-6 xl:py-5">
-              <div className="w-[45%]  lg:w-[40%] xl:w-[90%]">
+              <div className="w-[45%]  lg:w-[40%] xl:w-[90%] xl:max-w-[240px]">
                 <p className="text-[#504E4E] text-[12px] sm:text-[14px] pr-[10px]">
                   “With AcuSky, we cut invoicing time in half and improved
                   tenant satisfaction immediately. The self-service portal was a
@@ -201,7 +201,7 @@ export default function TrustSection() {
               className="object-contain rounded-[20px]"
             />
             <div className="absolute inset-0 flex items-start justify-center py-2 sm:py-10 md:py-4  lg:py-6 xl:py-5">
-              <div className="w-[45%] md:w-[48%] lg:w-[40%] xl:w-[65%]">
+              <div className="w-[45%] md:w-[48%] lg:w-[40%] xl:w-[65%] xl:max-w-[230px]">
                 <p className="text-[#504E4E] text-[12px] sm:text-[14px] pr-[15px] lg:pr-[5px]">
                   “Our old system couldn&apos;t keep up with growth. AcuSky gave
                   us one modern software that scales with us.”
