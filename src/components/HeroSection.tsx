@@ -47,7 +47,7 @@ export default function HeroAcuSky() {
                 future-ready architecture so your airport never gets delayed.
               </p>
               <div className="mt-6">
-                <div className="flex flex-col lg:flex-row items-center gap-3 sm:gap-4 w-full max-w-[480px]">
+                <div className="flex flex-col lg:flex-row items-center w-full max-w-[480px]">
                   <button
                     className="relative w-full h-[70px] sm:h-[80px] md:h-[90px] font-semibold text-white overflow-hidden rounded-lg cursor-pointer"
                     onClick={() => router.push("/under-renovation")}
